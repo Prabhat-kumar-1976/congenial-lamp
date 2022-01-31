@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+
+</head>
+
+<body>
+  <img src="images/illustration-box-desktop.svg" class="img-box" alt="box">
+  <main>
+    <div class="icon">
+      <img class="icon-top" src="images/illustration-woman-online-mobile.svg" alt="icon-top" width="180"
+        height="236.85">
+      <img class="icon-bottom" src="images/bg-pattern-mobile.svg" alt="icon-bottom">
+    </div>
+
+    <div class="icon-pc">
+      <img src="images/illustration-woman-online-desktop.svg" class="img-up" alt="icon">
+      <div class="hidden-div">
+      <img src="images/bg-pattern-desktop.svg" class="img-down" alt="shadow">
+    </div>
+  </div>
+    <div class="faqs">
+      <div class="heading">
+        <h1>FAQ</h1>
+      </div>
+      <div class="qn" id="qn1" onclick="gle(1)" >How many team members can I invite?<img src="images/icon-arrow-down.svg" alt="down-arrow" class="arrow-down"></img></div>
+      <div id="ans1" class="ans">You can invite up to 2 additional users on the Free plan. There is no limit on
+        team members for the Premium plan.</div>
+      <i class="divider"></i>
+      <div class="qn" id="qn2" onclick="gle(2)">What is the maximum file upload size?<img src="images/icon-arrow-down.svg" alt="down-arrow" class="arrow-down" ></img></div>
+      <div id="ans2" class="ans">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+      <i class="divider"></i>
+      <div class="qn" id="qn3" onclick="gle(3)">How do I reset my password?<img src="images/icon-arrow-down.svg" alt="down-arrow" class="arrow-down" ></img></div>
+      <div id="ans3" class="ans">Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</div>
+      <i class="divider"></i>
+      <div class="qn" id="qn4" onclick="gle(4)">Can I cancel my subscription?<img src="images/icon-arrow-down.svg" alt="down-arrow" class="arrow-down" ></img></div>
+      <div id="ans4" class="ans">Yes! Send us a message and we’ll process your request no questions asked.</div>
+      <i class="divider"></i>
+      <div class="qn" id="qn5" onclick="gle(5)">Do you provide additional support?<img src="images/icon-arrow-down.svg" alt="down-arrow" class="arrow-down" ></img></div>
+      <div id="ans5" class="ans">Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      </div>
+      <i class="divider"></i>
+    </div>
+    </div>
+  </main>
+</body>
+<script >
+ let  ans1 = document.querySelector("#ans1");
+ let  ans2 = document.querySelector("#ans2");
+ let  ans3 = document.querySelector("#ans3");
+ let  ans4 = document.querySelector("#ans4");
+ let  ans5 = document.querySelector("#ans5");
+ let  qn1 = document.querySelector("#qn1");
+ let  qn2 = document.querySelector("#qn2");
+ let  qn3 = document.querySelector("#qn3");
+ let  qn4 = document.querySelector("#qn4");
+ let  qn5 = document.querySelector("#qn5");
+ let arr = document.getElementsByClassName("arrow-down");
+ let ans = document.getElementsByClassName("ans");
+ let qn = document.getElementsByClassName("qn");
+function gle(i){
+  
+  if (i== 1 && ans1.style.display == ""  ) {
+    var j = 0;
+    for (j = 0; j < ans.length; j++) {
+        ans[j].style.display = "";
+        qn[j].style.fontWeight = "400"
+        }
+    ans1.style.display ="flex"
+    qn1.style.fontWeight="700"
+    arr[0].style.transform = "rotate(180deg)"
+    // qn1.style.color = "hsl(238, 29%, 16%)"
+  }
+  else if ( i == 1 && ans1.style.display =="flex"){
+    ans1.style.display =""
+    qn1.style.fontWeight="400"
+    arr[0].style.transform = "rotate(360deg)"
+  }
+  if (i== 2 && ans2.style.display == ""  ) {
+    var j = 0;
+    for (j = 0; j < ans.length; j++) {
+        ans[j].style.display = "";
+        qn[j].style.fontWeight = "400"
+        }
+    ans2.style.display ="flex"
+    qn2.style.fontWeight="700"
+    arr[1].style.transform = "rotate(180deg)"
+    // qn1.style.color = "hsl(238, 29%, 16%)"
+  }
+  else if ( i == 2 && ans2.style.display =="flex"){
+    ans2.style.display =""
+    qn2.style.fontWeight="400"
+    arr[1].style.transform = "rotate(360deg)"
+    
+  }
+  if (i== 3 && ans3.style.display == ""  ) {
+    var j = 0;
+    for (j = 0; j < ans.length; j++) {
+        ans[j].style.display = "";
+        qn[j].style.fontWeight = "400"
+        }
+    ans3.style.display ="flex"
+    qn3.style.fontWeight="700"
+    arr[2].style.transform = "rotate(180deg)"
+    // qn1.style.color = "hsl(238, 29%, 16%)"
+  }
+  else if ( i == 3 && ans3.style.display =="flex"){
+    ans3.style.display =""
+    qn3.style.fontWeight="400"
+    arr[2].style.transform = "rotate(360deg)"
+  }
+  if (i== 4 && ans4.style.display == ""  ) {
+    var j = 0;
+    for (j = 0; j < ans.length; j++) {
+        ans[j].style.display = "";
+        qn[j].style.fontWeight = "400"
+        }
+    ans4.style.display ="flex"
+    qn4.style.fontWeight="700"
+    arr[3].style.transform = "rotate(360deg)"
+    // qn1.style.color = "hsl(238, 29%, 16%)"
+  }
+  else if ( i == 4 && ans4.style.display =="flex"){
+    ans4.style.display =""
+    qn4.style.fontWeight="400"
+    arr[3].style.transform = "rotate(360deg)"
+  }
+  if (i== 5 && ans5.style.display == ""  ) {
+    var j = 0;
+    for (j = 0; j < ans.length; j++) {
+        ans[j].style.display = "";
+        qn[j].style.fontWeight = "400"
+        }
+    ans5.style.display ="flex"
+    qn5.style.fontWeight="700"
+    
+    arr[4].style.transform = "rotate(180deg)"
+    // qn1.style.color = "hsl(238, 29%, 16%)"
+  }
+  else if ( i == 5 && ans5.style.display =="flex"){
+    ans5.style.display =""
+    qn5.style.fontWeight="400"
+    arr[4].style.transform = "rotate(360deg)"
+  }
+ 
+}
+</script>
+</html>
