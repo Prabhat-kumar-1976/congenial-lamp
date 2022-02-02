@@ -90,6 +90,7 @@ main{
 .ans{
     display: none;
     padding-right: 30px;
+    transition: all 0.3s ease;
 }
 .divider{
     display: block;
